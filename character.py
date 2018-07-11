@@ -1,6 +1,10 @@
 #define the character class 
 class Character():
-	
+	#THINGS TO DO:
+	#Configure Job -> Spells
+	#Determine how leveling up affects each character
+	#Fix up webpage
+	#Create character display
 	def __init__(self, name, race, job, rollStr, rollDex, rollCon, rollInt, rollWis, rollCha):
 		#base stats, will be modified by race and job choices
 		self.chrName=name		
@@ -18,7 +22,7 @@ class Character():
 		self.chrJob=job
 		self.racemod()
 		self.jobmod()
-		self.getChar()
+		#self.getChar()
 
 	#race alters base stats
 	def dwarf(self):
@@ -67,7 +71,7 @@ class Character():
 		self.chrInt+=1
 		self.chrCha+=2
 		self.chrSpeed=30
-
+	#9 different races to choose from
 	racedict ={
 		"Dwarf": dwarf,
 		"Elf": elf,
@@ -104,6 +108,8 @@ class Character():
 		self.chrHitDie=8
 	def wizard(self):
 		self.chrHitDie=6
+
+	#12 different jobs to choose from
 	jobdict ={
 		"Barbarian" : barbarian,
 		"Bard" : bard,
@@ -121,16 +127,9 @@ class Character():
 	#alters skill attributes based on chrRace, by calling the appropriate function using racedict
 	def racemod(self):
 		self.racedict[self.chrRace](self)
+	#Alters hit die which influences hit points. Should eventually determine available spells
 	def jobmod(self):
 		self.jobdict[self.chrJob](self)
-	#Prints out relevant character information
-	def getChar(self):
-		print self.chrName +" the " + self.chrRace + ": lvl " + str(self.chrLvl) + " " + self.chrJob
-		print "Strength Score: " + str(self.chrStr)
-		print "Dexterity Score: " + str(self.chrDex)
-		print "Constitution Score: " + str(self.chrCon)
-		print "Intelligence Score: " + str(self.chrInt)
-		print "Wisdom Score: " + str(self.chrWis)
-		print "Charisma Score: " + str(self.chrCha)
+
 	
-Per = Character('Per', 'Dragonborn', 'Bard', 12, 12, 12, 12, 12, 12)
+

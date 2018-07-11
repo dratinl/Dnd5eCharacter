@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Character Creation</title>
+	</head>
+	<body>
+		<h2>Create a new character</h2>
+
+		<form method="post" action="/newcharacter">
+			<input type="text" name="name" value="Type full name here">
+			
+			<br><br>
+
+			Select Race:<br>
+			<select name="race">
+				<option value="Dwarf">Dwarf</option>
+				<option value="Elf">Elf</option>
+				<option value="Halfling">Halfling</option>
+				<option value="Human">Human</option>
+				<option value="Dragonborn">Dragonborn</option>
+				<option value="Gnome">Gnome</option>
+				<option value="Half-Elf">Half-Elf</option>
+				<option value="Half-Orc">Half-Orc</option>
+				<option value="Tiefling">Tiefling</option>
+			</select>
+
+			<br><br>
+
+			Select Class:<br>
+			<select name="job">
+				<option value="Barbarian">Barbarian</option>
+				<option value="Bard">Bard</option>
+				<option value="Cleric">Cleric</option>
+				<option value="Druid">Druid</option>
+				<option value="Fighter">Fighter</option>
+				<option value="Monk">Monk</option>
+				<option value="Paladin">Paladin</option>
+				<option value="Ranger">Ranger</option>
+				<option value="Rogue">Rogue</option>
+				<option value="Sorceror">Sorceror</option>
+				<option value="Warlock">Warlock</option>
+				<option value="Wizard">Wizard</option>
+			</select>
+
+			<br><br>
+
+			<fieldset>
+			<legend>Ability Scores</legend>
+				<input type="text" name="strength" style="width: 20px"> Strength<br> 
+				<input type="text" name="dexterity" style="width: 20px"> Dexterity<br>
+				<input type="text" name="constitution" style="width: 20px"> Constitution<br>
+				<input type="text" name="intelligence" style="width: 20px"> Intelligence <br>
+				<input type="text" name="wisdom" style="width: 20px"> Wisdom<br>
+				<input type="text" name="charisma" style="width: 20px"> Charisma<br>
+			</fieldset>
+
+			<br>
+
+			<input type="submit" name="submit" value="Submit">
+		</form>
+	</body>
+</html>
