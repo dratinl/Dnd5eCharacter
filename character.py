@@ -1,10 +1,6 @@
 #define the character class 
 class Character():
-	#THINGS TO DO:
-	#Configure Job -> Spells
-	#Determine how leveling up affects each character
-	#Fix up webpage
-	#Create character display
+
 	def __init__(self, name, race, job, rollStr, rollDex, rollCon, rollInt, rollWis, rollCha):
 		#base stats, will be modified by race and job choices
 		self.chrName=name		
@@ -130,6 +126,3 @@ class Character():
 	#Alters hit die which influences hit points. Should eventually determine available spells
 	def jobmod(self):
 		self.jobdict[self.chrJob](self)
-
-	
-
