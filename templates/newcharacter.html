@@ -4,15 +4,15 @@
 		<title>New Dude</title>
 	</head>
 	<body>
-		<p>Name: {{newchar.chrName}} </p>
+		<p>Name: {{newchar.chrName}}</p>
 		<p>Race: {{newchar.chrRace}}</p>
 		<p>Class: {{newchar.chrJob}}</p>
-		<p>Strength: {{newchar.chrStr}}</p>
-		<p>Dexterity: {{newchar.chrDex}}</p>
-		<p>Constitution: {{newchar.chrCon}}</p>
-		<p>Intelligence: {{newchar.chrInt}}</p>
-		<p>Wisdom: {{newchar.chrWis}}</p>
-		<p>Charisma: {{newchar.chrCha}}</p>
+		<p>Strength: {{newchar.chrStr}} ({{newchar.stat_mod(newchar.chrStr)}})</p>
+		<p>Dexterity: {{newchar.chrDex}} ({{newchar.stat_mod(newchar.chrDex)}})</p>
+		<p>Constitution: {{newchar.chrCon}} ({{newchar.stat_mod(newchar.chrCon)}})</p>
+		<p>Intelligence: {{newchar.chrInt}} ({{newchar.stat_mod(newchar.chrInt)}})</p>
+		<p>Wisdom: {{newchar.chrWis}} ({{newchar.stat_mod(newchar.chrWis)}})</p>
+		<p>Charisma: {{newchar.chrCha}} ({{newchar.stat_mod(newchar.chrCha)}})</p>
 
 
 	</body>

@@ -1,3 +1,5 @@
+import json
+
 #define the character class 
 class Character():
 
@@ -16,9 +18,14 @@ class Character():
 		self.chrRace=race
 		#job instead of class for syntax reasons
 		self.chrJob=job
-		self.racemod()
-		self.jobmod()
+		self.chrSpells=[]
+		self.race_mod()
+		self.job_mod()
 		#self.getChar()
+
+	#Adds a Spell object to list of spells held by Character instance
+	def add_spell(self, spell_name):
+		self.chrSpells.append(spell_name)
 
 	#race alters base stats
 	def dwarf(self):
@@ -68,7 +75,7 @@ class Character():
 		self.chrCha+=2
 		self.chrSpeed=30
 	#9 different races to choose from
-	racedict ={
+	race_dict ={
 		"Dwarf": dwarf,
 		"Elf": elf,
 		"Halfling": half,
@@ -106,7 +113,7 @@ class Character():
 		self.chrHitDie=6
 
 	#12 different jobs to choose from
-	jobdict ={
+	job_dict ={
 		"Barbarian" : barbarian,
 		"Bard" : bard,
 		"Cleric" : cleric,
@@ -120,9 +127,39 @@ class Character():
 		"Warlock" : warlock,
 		"Wizard" : wizard
 	}
-	#alters skill attributes based on chrRace, by calling the appropriate function using racedict
-	def racemod(self):
-		self.racedict[self.chrRace](self)
-	#Alters hit die which influences hit points. Should eventually determine available spells
-	def jobmod(self):
-		self.jobdict[self.chrJob](self)
+	# Alters skill attributes based on chrRace, by calling the appropriate function using racedict
+	def race_mod(self):
+		self.race_dict[self.chrRace](self)
+	# Alters hit die which influences hit points. Should eventually determine available spells
+	def job_mod(self):
+		self.job_dict[self.chrJob](self)
+	# Stat mod shows added bonus for each individual stat. Rounds down, so -11
+	def stat_mod(self, stat):
+		if stat % 2 == 0:
+			return (stat-10) / 2
+		return (stat-11) / 2 
+
+class Spells():
+
+	#Spell class holds all spell information
+	def __init__(self, spell_name, description, spell_range, spell_level, attack_save, cast_time, duration):
+		self.spell_name = spell_name
+		self.description = description
+		self.spell_range = spell_range
+		self.spell_level = spell_level
+		self.attack_save = attack_save
+		self.cast_time = cast_time
+		self.duration = duration
+
+Per = Character('Per', 'Dragonborn', 'Bard', 12, 12, 12, 12, 12, 12)
+#print Per.__dict__
+#print Per.stat_mod(Per.chrStr)
+data = json.loads(open('spells.json').read())
+#user_spell = raw_input("What Spell do you want to add")
+
+#Testing purposes. Currently creates character Per and adds all spells in database for class Bard
+for x in range(0, len(data)):
+	if 'Bard' in data[x]['class']:
+		Per.add_spell(Spells(data[x]['name'], data[x]['description'], data[x]['range'], data[x]['level'], data[x]['attack_save'], data[x]['casting_time'], data[x]['duration'] ))
+for y in Per.chrSpells:
+	print y.spell_name

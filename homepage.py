@@ -3,11 +3,12 @@ from character  import Character
 import requests
 
 app = Flask(__name__)
-
+#homepage. Currently sits on character creation page
+#values passed in this form are send through to /newcharacter
 @app.route('/')
 def home():
 	return render_template('new.html')
-
+#values obtained from new.html passed through character.py and printed out via newcharacter.html
 @app.route('/newcharacter', methods=['GET', 'POST'])
 def new():
 	if request.method =='POST':
