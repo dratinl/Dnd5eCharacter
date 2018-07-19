@@ -11,18 +11,18 @@ Currently takes in and alters character ability scores based on race and job cho
 
 ## To do:
 
--Expand Spell index.
+- Expand Spell index.
 
--Implement front end spell adding.
+- Implement front end spell adding.
 
--Create feature index.
+- Create feature index.
 
--Allow user to adopt or choose features based on race/job.
+- Allow user to adopt or choose features based on race/job.
 
--Clean up html files and add CSS flair.
+- Clean up html files and add CSS flair.
 
--Add information display for Race/Job/Spell/Feature.
+- Add information display for Race/Job/Spell/Feature.
 
--Add Save Character option.
+- Add Save Character option.
 
--Add Edit Character option.
+- Add Edit Character option.
