@@ -9,8 +9,8 @@ Currently takes in and alters character ability scores based on race and job cho
 
 To do:
 
-Create Spells index
-Allow user to choose spells based on race/job
+Expand Spell index
+Implement front end spell adding
 Create feature index
 Allow user to adopt or choose features based on race/job
 Clean up html files and add CSS flair
