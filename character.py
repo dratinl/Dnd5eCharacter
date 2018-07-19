@@ -151,15 +151,17 @@ class Spells():
 		self.cast_time = cast_time
 		self.duration = duration
 
-Per = Character('Per', 'Dragonborn', 'Bard', 12, 12, 12, 12, 12, 12)
+def get_Spells(char_job, char_level):
+	available_spells =[]
+	data = json.loads(open('spells.json').read())
+	for x in range(0, len(data)):
+		if char_job in data[x]['class'] and (char_level >= int(data[x]['level'])):
+			available_spells.append((Spells(data[x]['name'], data[x]['description'], data[x]['range'], data[x]['level'], data[x]['attack_save'], data[x]['casting_time'], data[x]['duration'] )))
+	return available_spells
+
+
+
 #print Per.__dict__
 #print Per.stat_mod(Per.chrStr)
-data = json.loads(open('spells.json').read())
-#user_spell = raw_input("What Spell do you want to add")
 
-#Testing purposes. Currently creates character Per and adds all spells in database for class Bard
-for x in range(0, len(data)):
-	if 'Bard' in data[x]['class']:
-		Per.add_spell(Spells(data[x]['name'], data[x]['description'], data[x]['range'], data[x]['level'], data[x]['attack_save'], data[x]['casting_time'], data[x]['duration'] ))
-for y in Per.chrSpells:
-	print y.spell_name
+

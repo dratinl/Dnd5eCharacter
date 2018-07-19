@@ -36,7 +36,7 @@
 		"duration":"Instantaneous",
 		"casting_time":"1 Action",
 		"attack_save":"Dex",
-		"level":"Cantrip",
+		"level":"0",
 		"class":"Sorcerer, Wizard"
 	},
 	{
@@ -177,7 +177,7 @@
 		"casting_time":"1 Action",
 		"attack_save":"None",
 		"level":"5",
-		"class":"Sorcerer, Wizard"
+		"class":"Sorcerer, Wizard, Warlock"
 	},
 	{
 		"name":"Arcane Hand",
@@ -217,7 +217,7 @@
 		"casting_time":"1 Hour",
 		"attack_save":"None",
 		"level":"9",
-		"class":"Cleric, Wizard"
+		"class":"Cleric, Wizard, Warlock"
 	},
 	{
 		"name":"Augury",
@@ -297,7 +297,7 @@
 		"casting_time":"1 Action",
 		"attack_save":"None",
 		"level":"4",
-		"class":"Cleric, Paladin, Sorcerer, Wizard"
+		"class":"Cleric, Paladin, Sorcerer, Wizard, Warlock"
 	},
 	{
 		"name":"Barkskin",
