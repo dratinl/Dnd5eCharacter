@@ -24,15 +24,15 @@ def test_barbarian_spells():
 
 def test_bard_spells():
 	bard_spells = get_Spells('Bard', 10)
-	assert len(bard_spells) == 6
+	assert len(bard_spells) == 9
 
 def test_cleric_spells():
 	cleric_spells = get_Spells('Cleric', 10)
-	assert len(cleric_spells) == 10
+	assert len(cleric_spells) == 13
 
 def test_druid_spells():
 	druid_spells = get_Spells('Druid', 10)
-	assert len(druid_spells) == 10
+	assert len(druid_spells) == 13
 
 def test_fighter_spells():
 	fighter_spells = get_Spells('Fighter', 10)
@@ -44,7 +44,7 @@ def test_monk_spells():
 
 def test_paladin_spells():
 	paladin_spells = get_Spells('Paladin', 10)
-	assert len(paladin_spells) == 6
+	assert len(paladin_spells) == 9
 
 def test_ranger_spells():
 	ranger_spells = get_Spells('Ranger', 10)
@@ -56,12 +56,12 @@ def test_rogue_spells():
 
 def test_sorcerer_spells():
 	sorcerer_spells = get_Spells('Sorcerer', 10)
-	assert len(sorcerer_spells) == 7
+	assert len(sorcerer_spells) == 15
 
 def test_warlock_spells():
 	warlock_spells = get_Spells('Warlock', 10)
-	assert len(warlock_spells) == 3
+	assert len(warlock_spells) == 5
 
 def test_wizard_spells():
 	wizard_spells = get_Spells('Wizard', 10)
-	assert len(wizard_spells) == 21
+	assert len(wizard_spells) == 29

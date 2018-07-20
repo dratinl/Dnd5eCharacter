@@ -160,8 +160,10 @@ def get_Spells(char_job, char_level):
 	return available_spells
 
 
+#jobs = ['Barbarian,', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard']
+#for x in jobs:
+#	av = get_Spells(x, 10)
+#	print (x + ' has: ' + str(len(av)) + ' spells')
 
-#print Per.__dict__
-#print Per.stat_mod(Per.chrStr)
 
 
